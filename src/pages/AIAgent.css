@@ -1,0 +1,698 @@
+/* =========================================
+   UNIGO AI AGENT
+========================================= */
+
+.ai-page {
+  min-height: 100vh;
+  background: #f7f2ea;
+  color: #17110e;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.ai-navbar {
+  height: 76px;
+  background: #17110e;
+  color: #fffaf3;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 7%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.ai-brand-mark {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 12px;
+  background: #d4a72c;
+  color: #17110e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.ai-nav-back {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: transparent;
+  color: #f7f2ea;
+
+  padding: 10px 18px;
+  border-radius: 12px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ai-nav-back:hover {
+  background: #fffaf3;
+  color: #17110e;
+}
+
+/* =========================================
+   MAIN AREA
+========================================= */
+
+.ai-main {
+  width: min(1050px, 92%);
+  margin: 0 auto;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 55px 0 35px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.ai-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  background: #fffdf9;
+  border: 1px solid #e5ddd2;
+
+  color: #a77b13;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.ai-header h1 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1;
+  letter-spacing: -3px;
+
+  color: #17110e;
+}
+
+.ai-header h1 span {
+  color: #b18419;
+}
+
+.ai-header p {
+  max-width: 600px;
+  margin: 18px auto 0;
+
+  color: #756c64;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   CHAT CONTAINER
+========================================= */
+
+.ai-chat-card {
+  width: 100%;
+
+  background: #fffdf9;
+
+  border: 1px solid #e4dbd0;
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 70px rgba(35, 25, 18, 0.08);
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 560px;
+}
+
+/* =========================================
+   CHAT TOP BAR
+========================================= */
+
+.ai-chat-top {
+  padding: 18px 24px;
+
+  border-bottom: 1px solid #eee6dc;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #4e4741;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ai-status-dot {
+  width: 9px;
+  height: 9px;
+
+  background: #d4a72c;
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 4px rgba(212, 167, 44, 0.12);
+}
+
+.ai-model {
+  font-size: 12px;
+  color: #9b9188;
+}
+
+/* =========================================
+   MESSAGES AREA
+========================================= */
+
+.ai-messages {
+  flex: 1;
+
+  padding: 28px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  min-height: 330px;
+  max-height: 470px;
+}
+
+/* Scrollbar */
+
+.ai-messages::-webkit-scrollbar {
+  width: 7px;
+}
+
+.ai-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ai-messages::-webkit-scrollbar-thumb {
+  background: #d8cec2;
+  border-radius: 10px;
+}
+
+.ai-messages::-webkit-scrollbar-thumb:hover {
+  background: #bdb0a2;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.ai-empty {
+  flex: 1;
+
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+.ai-empty-icon {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 22px;
+
+  background: #17110e;
+  color: #d4a72c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+
+  margin-bottom: 20px;
+
+  box-shadow:
+    0 12px 30px rgba(23, 17, 14, 0.15);
+}
+
+.ai-empty h2 {
+  margin: 0;
+
+  font-size: 25px;
+  letter-spacing: -0.7px;
+}
+
+.ai-empty p {
+  max-width: 500px;
+
+  margin: 10px auto 0;
+
+  color: #81776e;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   QUICK PROMPTS
+========================================= */
+
+.ai-quick-prompts {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.ai-quick-btn {
+  border: 1px solid #e3d9ce;
+
+  background: #faf6ef;
+
+  color: #514940;
+
+  padding: 10px 15px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.ai-quick-btn:hover {
+  background: #17110e;
+  color: #fffaf3;
+
+  border-color: #17110e;
+
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   MESSAGE ROW
+========================================= */
+
+.ai-message {
+  display: flex;
+  gap: 12px;
+
+  width: 100%;
+}
+
+.ai-message.user {
+  justify-content: flex-end;
+}
+
+.ai-message-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex: 0 0 36px;
+
+  border-radius: 12px;
+
+  background: #17110e;
+  color: #d4a72c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.ai-message.user .ai-message-avatar {
+  background: #d4a72c;
+  color: #17110e;
+  order: 2;
+}
+
+/* =========================================
+   MESSAGE BUBBLE
+========================================= */
+
+.ai-message-bubble {
+  max-width: min(75%, 680px);
+
+  padding: 13px 16px;
+
+  border-radius: 18px;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  white-space: pre-wrap;
+}
+
+.ai-message.assistant .ai-message-bubble {
+  background: #f4eee6;
+
+  color: #302923;
+
+  border-top-left-radius: 5px;
+}
+
+.ai-message.user .ai-message-bubble {
+  background: #17110e;
+
+  color: #fffaf3;
+
+  border-top-right-radius: 5px;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.ai-loading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 14px 17px;
+
+  background: #f4eee6;
+
+  border-radius: 18px;
+  border-top-left-radius: 5px;
+
+  width: fit-content;
+}
+
+.ai-loading span {
+  width: 7px;
+  height: 7px;
+
+  background: #a77b13;
+
+  border-radius: 50%;
+
+  animation: aiDot 1.2s infinite ease-in-out;
+}
+
+.ai-loading span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.ai-loading span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes aiDot {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   INPUT AREA
+========================================= */
+
+.ai-input-area {
+  padding: 18px 22px 22px;
+
+  border-top: 1px solid #eee6dc;
+
+  background: #fffdf9;
+}
+
+.ai-input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+
+  background: #f8f3ec;
+
+  border: 1px solid #ded4c8;
+
+  border-radius: 18px;
+
+  padding: 8px;
+
+  transition: border 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ai-input-wrapper:focus-within {
+  border-color: #c69a29;
+
+  box-shadow:
+    0 0 0 4px rgba(198, 154, 41, 0.1);
+}
+
+.ai-input {
+  flex: 1;
+
+  resize: none;
+
+  min-height: 44px;
+  max-height: 130px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #27211d;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  padding: 11px 10px;
+}
+
+.ai-input::placeholder {
+  color: #a49a90;
+}
+
+.ai-send-btn {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  border: none;
+
+  border-radius: 13px;
+
+  background: #17110e;
+  color: #d4a72c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.ai-send-btn:hover:not(:disabled) {
+  background: #d4a72c;
+  color: #17110e;
+
+  transform: translateY(-2px);
+}
+
+.ai-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   INPUT NOTE
+========================================= */
+
+.ai-input-note {
+  margin: 10px 4px 0;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #a49a90;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.ai-error {
+  margin: 0 28px 15px;
+
+  padding: 12px 15px;
+
+  border-radius: 12px;
+
+  background: #fff1ec;
+
+  border: 1px solid #f0d1c6;
+
+  color: #9b4935;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .ai-navbar {
+    padding: 0 5%;
+    height: 68px;
+  }
+
+  .ai-main {
+    width: 94%;
+    padding: 35px 0 25px;
+  }
+
+  .ai-header {
+    margin-bottom: 25px;
+  }
+
+  .ai-header h1 {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .ai-header p {
+    font-size: 14px;
+  }
+
+  .ai-chat-card {
+    border-radius: 22px;
+    min-height: 520px;
+  }
+
+  .ai-messages {
+    padding: 20px 16px;
+  }
+
+  .ai-message-bubble {
+    max-width: 82%;
+  }
+
+  .ai-input-area {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-brand {
+    font-size: 18px;
+  }
+
+  .ai-brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .ai-nav-back {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .ai-header h1 {
+    font-size: 36px;
+  }
+
+  .ai-header p {
+    font-size: 13px;
+  }
+
+  .ai-chat-top {
+    padding: 14px 16px;
+  }
+
+  .ai-model {
+    display: none;
+  }
+
+  .ai-message-bubble {
+    max-width: 88%;
+    font-size: 13px;
+  }
+
+  .ai-quick-prompts {
+    gap: 7px;
+  }
+
+  .ai-quick-btn {
+    font-size: 12px;
+    padding: 8px 11px;
+  }
+}

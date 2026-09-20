@@ -1,0 +1,758 @@
+/* =========================================================
+   UNIGO COMMUNITY
+   Same visual language as Home + Marketplace
+   ========================================================= */
+
+.community-app {
+  min-height: 100vh;
+  background: #f7f3ec;
+  color: #17110e;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+.community-page {
+  min-height: 100vh;
+  padding: 155px 7vw 110px;
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(212, 167, 44, 0.08),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 55%,
+      rgba(0, 0, 0, 0.025),
+      transparent 30%
+    ),
+    #f7f3ec;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.community-hero {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.community-hero .small-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #a17d1f;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.community-hero .small-title::before,
+.community-hero .small-title::after {
+  content: "";
+  width: 32px;
+  height: 1px;
+  background: #d4a72c;
+}
+
+.community-hero h1 {
+  max-width: 900px;
+  margin: 22px auto 0;
+
+  color: #24150f;
+  font-size: clamp(55px, 6.5vw, 84px);
+  line-height: 1;
+  letter-spacing: -4px;
+  font-weight: 800;
+}
+
+.community-subtitle {
+  max-width: 700px;
+  margin: 28px auto 32px;
+
+  color: #75675e;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   CREATE POST BUTTON
+   ========================================================= */
+
+.community-hero .view-btn {
+  border: 0;
+  background: #d4a72c;
+  color: #17110e;
+
+  padding: 14px 24px;
+  border-radius: 14px;
+
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow:
+    0 10px 25px rgba(212, 167, 44, 0.18);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.community-hero .view-btn:hover {
+  background: #e0b83d;
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 32px rgba(212, 167, 44, 0.25);
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.community-filters {
+  max-width: 1100px;
+  margin: 55px auto 0;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+
+  padding: 12px;
+
+  border: 1px solid rgba(23, 17, 14, 0.07);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 18px 45px rgba(23, 17, 14, 0.07);
+}
+
+.community-filters button {
+  border: 1px solid transparent;
+  background: transparent;
+  color: #655d57;
+
+  padding: 12px 18px;
+  border-radius: 13px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.community-filters button:hover {
+  background: #f1ebe2;
+  color: #17110e;
+  transform: translateY(-1px);
+}
+
+.community-filters button.is-active {
+  background: #17110e;
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(23, 17, 14, 0.15);
+}
+
+/* =========================================================
+   COMMUNITY FEED
+   ========================================================= */
+
+.community-feed {
+  max-width: 1100px;
+  margin: 65px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.community-post {
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(23, 17, 14, 0.075);
+  border-radius: 23px;
+
+  padding: 28px;
+
+  box-shadow:
+    0 12px 35px rgba(23, 17, 14, 0.055),
+    inset 0 1px rgba(255, 255, 255, 0.9);
+
+  text-align: left;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.community-post:hover {
+  transform: translateY(-5px);
+
+  border-color:
+    rgba(212, 167, 44, 0.25);
+
+  box-shadow:
+    0 24px 50px rgba(23, 17, 14, 0.10);
+}
+
+/* =========================================================
+   POST HEADER
+   ========================================================= */
+
+.community-post-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 18px;
+}
+
+.community-avatar {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #17110e;
+  color: #d4a72c;
+
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.community-post-meta strong {
+  display: block;
+  color: #2b211c;
+  font-size: 13px;
+}
+
+.community-post-meta p {
+  margin-top: 4px;
+
+  color: #968b83;
+  font-size: 11px;
+}
+
+/* =========================================================
+   POST CONTENT
+   ========================================================= */
+
+.community-post h2 {
+  margin: 0 0 10px;
+
+  color: #24150f;
+
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+}
+
+.community-post-content {
+  color: #71655d;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   POST ACTIONS
+   ========================================================= */
+
+.community-post-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.community-post-actions button {
+  border: 1px solid rgba(23, 17, 14, 0.10);
+  background: #f8f3eb;
+  color: #5e554e;
+
+  padding: 10px 15px;
+  border-radius: 11px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.community-post-actions button:hover {
+  background: #eee6db;
+  color: #17110e;
+  transform: translateY(-1px);
+}
+
+.community-post-actions button.is-liked {
+  background: #d4a72c;
+  border-color: #d4a72c;
+  color: #17110e;
+}
+
+.community-post-actions button.is-open {
+  border-color: rgba(212, 167, 44, 0.45);
+  background: #fff8e8;
+  color: #24150f;
+}
+
+/* =========================================================
+   COMMENTS
+   ========================================================= */
+
+.community-comments {
+  margin-top: 20px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(23, 17, 14, 0.08);
+}
+
+.community-comments-empty {
+  margin-bottom: 14px;
+
+  color: #968b83;
+  font-size: 13px;
+}
+
+.community-comment {
+  background: #f7f2ea;
+
+  border: 1px solid #e8ded2;
+  border-radius: 14px;
+
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+
+.community-comment strong {
+  color: #3a2c24;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.community-comment span {
+  color: #9b9189;
+  font-size: 10px;
+}
+
+.community-comment p {
+  margin-top: 7px;
+
+  color: #70655d;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   COMMENT FORM
+   ========================================================= */
+
+.community-comment-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.community-comment-form input {
+  flex: 1;
+
+  border: 1px solid rgba(23, 17, 14, 0.12);
+  border-radius: 12px;
+
+  padding: 13px 15px;
+
+  background: #ffffff;
+  color: #3a241a;
+
+  outline: none;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.community-comment-form input::placeholder {
+  color: #a59b92;
+}
+
+.community-comment-form input:focus {
+  border-color: #c49a2a;
+
+  box-shadow:
+    0 0 0 4px rgba(212, 167, 44, 0.10);
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.community-empty {
+  max-width: 1100px;
+  min-height: 390px;
+
+  margin: 65px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(212, 167, 44, 0.075),
+      transparent 45%
+    ),
+    rgba(255, 255, 255, 0.55);
+
+  border: 1px dashed rgba(23, 17, 14, 0.14);
+  border-radius: 28px;
+
+  box-shadow:
+    0 12px 35px rgba(23, 17, 14, 0.045);
+}
+
+.community-empty h2 {
+  margin: 0;
+
+  color: #24150f;
+
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+.community-empty p {
+  max-width: 440px;
+
+  margin: 10px 0 20px;
+
+  color: #817870;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CREATE POST MODAL
+   ========================================================= */
+
+.community-modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(23, 17, 14, 0.62);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 200;
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.community-modal {
+  width: 100%;
+  max-width: 580px;
+
+  background: #fffdf9;
+
+  border: 1px solid rgba(23, 17, 14, 0.10);
+  border-radius: 24px;
+
+  padding: 32px;
+
+  text-align: left;
+
+  box-shadow:
+    0 30px 80px rgba(23, 17, 14, 0.25);
+
+  animation: communityModalIn 0.25s ease both;
+}
+
+@keyframes communityModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.community-modal .small-title {
+  color: #a17d1f;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.community-modal h2 {
+  margin: 9px 0 7px;
+
+  color: #24150f;
+
+  font-size: 28px;
+  letter-spacing: -0.8px;
+}
+
+.community-modal > p {
+  color: #756a62;
+  margin-bottom: 10px;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.community-modal .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-top: 20px;
+}
+
+.community-modal .form-group label {
+  color: #4a3425;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+.community-modal .form-group input,
+.community-modal .form-group select,
+.community-modal .form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(23, 17, 14, 0.12);
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  padding: 13px 14px;
+
+  font-family: inherit;
+  font-size: 14px;
+  color: #3a241a;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.community-modal .form-group input::placeholder,
+.community-modal .form-group textarea::placeholder {
+  color: #a59b92;
+}
+
+.community-modal .form-group input:hover,
+.community-modal .form-group select:hover,
+.community-modal .form-group textarea:hover {
+  border-color: #c7b49f;
+}
+
+.community-modal .form-group input:focus,
+.community-modal .form-group select:focus,
+.community-modal .form-group textarea:focus {
+  border-color: #c49a2a;
+
+  box-shadow:
+    0 0 0 4px rgba(212, 167, 44, 0.10);
+}
+
+.community-modal .form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* =========================================================
+   FORM ERROR
+   ========================================================= */
+
+.community-form-error {
+  margin-top: 14px;
+
+  color: #8a3b22;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   MODAL BUTTONS
+   ========================================================= */
+
+.community-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 26px;
+}
+
+.community-cancel-btn {
+  border: 1px solid rgba(23, 17, 14, 0.12);
+  background: #f5efe7;
+  color: #4a3425;
+
+  padding: 12px 19px;
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.community-cancel-btn:hover {
+  background: #ebe2d7;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   GLOBAL COMMUNITY BUTTON FOCUS
+   ========================================================= */
+
+.community-app button:focus-visible,
+.community-app input:focus-visible,
+.community-app select:focus-visible,
+.community-app textarea:focus-visible {
+  outline: 3px solid rgba(212, 167, 44, 0.28);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .community-page {
+    padding: 125px 6% 70px;
+  }
+
+  .community-hero h1 {
+    font-size: 46px;
+    letter-spacing: -2.5px;
+  }
+
+  .community-subtitle {
+    font-size: 15px;
+  }
+
+  .community-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .community-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .community-feed {
+    margin-top: 45px;
+  }
+
+  .community-post {
+    padding: 21px;
+  }
+
+  .community-post h2 {
+    font-size: 21px;
+  }
+
+  .community-comment-form {
+    flex-direction: column;
+  }
+
+  .community-comment-form button {
+    width: 100%;
+  }
+
+  .community-modal {
+    padding: 25px 20px;
+  }
+
+  .community-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .community-modal-actions button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.community-creator {
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 8px;
+  font-size: 12px;
+}
