@@ -266,7 +266,7 @@ const searchResults = listings.filter((listing) => {
         <p>
           Your student world, all in one place.
         </p>
-         <p className="lf-creator">Built by Anusha Tiwari</p>
+         <p className="lf-creator">Built by Student for Student</p>
 
       </footer>
 
