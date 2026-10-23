@@ -735,7 +735,7 @@ function Community({
         </p>
 
         <p className="community-creator">
-          Built by Student for Student
+          Built by Anusha Tiwari
         </p>
 
       </footer>
